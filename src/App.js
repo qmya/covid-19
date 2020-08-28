@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from './assets/image.png';
 import styles from './App.module.css';
 import { fetchData } from './api';
 import { Cards, Charts, CountryPicker } from './components';
@@ -31,7 +32,7 @@ class App extends React.Component{
 
   return (
     <div className={styles.container}>
-      <h1>App</h1>
+      <img className={styles.image} src={Logo} alt='logo for the app'/>
       <Cards data = {data} />
       <CountryPicker handleCountryChange={this.handleCountryChange}/>
       <Charts data={data} country={country}/>
